@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Style.css">
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header flex">
+        <img src="./images/logo.png" alt="logo" />
+        <ul class="flex nav__list">
+          <li><a href="#" class="navbar__link active">Home</a></li>
+          <li><a href="#" class="navbar__link">Menu</a></li>
+          <li><a href="#" class="navbar__link">About</a></li>
+          <li><a href="#" class="navbar__link">Sessions</a></li>
+        </ul>
+        <div class="profile">
+          <img src="./images/basket.png" alt="basket" />
+          <img src="./images/profile.png" alt="profile" />
+        </div>
+      </div>
+      <div class="home">
+        <img
+          src="./images/title.png"
+          alt="title__image"
+          class="home__title__image"
+        />
+        <p class="home__subtitle">
+          Lorem ipsum dolor sit amet consectetur. Turpis diam id nulla libero at
+          faucibus libero eget. Ornare tincidunt tempor sed egestas pulvinar
+          facilisis.
+        </p>
+        <button class="home__btn">Order Now</button>
+        <img
+          src="./images/hero__image.png"
+          alt="hero__image"
+          class="hero__photo"
+        />
+        <img src="./images/slide-j-text.png" alt="logo__carusel" />
+      </div>
+      <div class="menu">
+        <h1>Our Specialties</h1>
+        <div class="menu__grid grid">
+          <div class="grid__items">
+            <img
+              src="./images/sushi.png"
+              alt="sushi__image"
+              class="grid__image"
+            />
+            <div class="grid__menu__price flex">
+              <h2>Sushi</h2>
+              <h4>12 varieties</h4>
+            </div>
+            <button>Order Now</button>
+          </div>
+          <div class="grid__items">
+            <img src="./images/ramen.png" alt="ramen" class="grid__image" />
+            <div class="grid__menu__price flex">
+              <h2>ramen</h2>
+              <h4>12 varieties</h4>
+            </div>
+            <button>Order Now</button>
+          </div>
+          <div class="grid__items">
+            <img src="./images/mochi.png" alt="mochi" class="grid__image" />
+            <div class="grid__menu__price flex">
+              <h2>mochi</h2>
+              <h4>12 varieties</h4>
+            </div>
+            <button>Order Now</button>
+          </div>
+          <div class="grid__items">
+            <img src="./images/onigiri.png" alt="onigiri" class="grid__image" />
+
+            <div class="grid__menu__price flex">
+              <h2>onigiri</h2>
+              <h4>12 varieties</h4>
+            </div>
+            <button>Order Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h1>Testimonials</h1>
+        <div class="testimonials__container grid">
+          <img src="./images/charlie.png" alt="charli" />
+          <img src="./images/marta.png" alt="marta" class="marta__photo" />
+          <img src="./images/zachery.png" alt="zachery" />
+        </div>
+      </div>
+      <footer class="footer flex">
+        <img src="./images/logo__white.png" alt="logo__photo" />
+        <div class="flex footer__link">
+          <div class="footer__link__title">
+            <h4><a href="#">Home</a></h4>
+            <ul class="footer__list">
+              <li><a href="#">Sushi</a></li>
+              <li><a href="#">Tempura</a></li>
+              <li><a href="#">Ramen</a></li>
+              <li><a href="#">Mochi</a></li>
+              <li><a href="#">Specialities</a></li>
+            </ul>
+          </div>
+          <div class="footer__link__title">
+            <h4><a href="#">Menu</a></h4>
+            <ul class="footer__list">
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Story</a></li>
+            </ul>
+          </div>
+          <div class="footer__link__title">
+            <h4><a href="#">About</a></h4>
+            <ul class="footer__list">
+              <li><a href="#">Booking</a></li>
+              <li><a href="#">Classes</a></li>
+            </ul>
+          </div>
+          <div class="footer__link__title">
+            <h4><a href="#">Sessions</a></h4>
+            <ul class="footer__list">
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__icon">
+            <i class="fa-brands fa-twitter icon__white"></i>
+            <i class="fa-brands fa-facebook-f icon__white"></i>
+            <i class="fa-brands fa-instagram icon__white"></i>
+            <i class="fa-brands fa-github icon__white"></i>
+        </div>
+      </footer>
+    </div>
+
     <script src="App.js"></script>
-</body>
+  </body>
 </html>

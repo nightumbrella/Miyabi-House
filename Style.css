@@ -1,7 +1,295 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+@font-face {
+  font-family: "HiroMisaki";
+  src: url(./fonts/HIRO\ MISAKE.woff) format("woff");
 }
+@font-face {
+  font-family: "Satoshi-Regular";
+   src: url("./fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+    src: url("./fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Light";
+    src: url("./fonts/Satoshi-Light.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+:root{
+  --orange: #E56E0C;
+  --main-color: #333F72;
+  --zero-opacity: 0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Satoshi-Medium";
+  color: black;
+}
+*::after{
+  box-sizing: border-box;
+}
+body{
+  background-color: #f1e9df;
+}
+button{
+  outline: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.container{
+  width: 1440px;
+  margin:0 auto;
+  background-color: #F3EDE1;
+  overflow: hidden;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.grid{
+  display: grid;
+}
+.header{
+  justify-content: space-between;
+  padding: 40px 80px;
+  border-bottom: 1px solid #E9DAC6;
+  margin-bottom: 60px;
+}
+.header ul li{
+  margin: 0 48px;
+}
+.active{
+  color: var(--orange);
+}
+.navbar__link{
+  position: relative;
+}
+.navbar__link::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--orange);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+ opacity: var(--zero-opacity);
+  transition: .5s ease;
+}
+.navbar__link:hover::after{
+  opacity: 1;
+}
+.navbar__link.active::after{
+ opacity: 1;
+  
+}
+.navbar__link:hover{
+  color: var(--orange);
+}
+
+/* !HOME */
+
+.home{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("./images/left__image.png"), url("./images/right__image.png");
+  background-repeat: no-repeat;
+  background-position: 0px 160px, 1155px 180px;
+  margin-bottom: 80px;
+}
+.home::after{
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.home__title__image{
+  width: 837px;
+  /* width: 100%; */
+
+}
+.home__title{
+  font-family: "HiroMisaki", sans-serif;
+
+}
+
+.home__subtitle{
+  font-family: Satoshi-Regular;
+  font-weight: 400;
+  width: 620px;
+  margin-bottom: 24px;
+}
+
+.home__btn{
+  background-color: var(--orange);
+  padding: 16px 45px;
+  border-radius: 24px 0 ;
+  font-family: "HiroMisaki";
+  margin-bottom: 60px;
+  transition: .2s ease-in;
+  border: 1px solid var(--orange);
+}
+.home__btn:hover{
+ background-color: transparent;
+ color: var(--orange);
+}
+/* !HOME */
+
+
+/* !MENU */
+.menu h1{
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "HiroMisaki";
+  color: #333F72;
+}
+.menu{
+  margin-bottom: 80px;
+}
+.menu__grid{
+  grid-template-columns: repeat(4,1fr);
+  justify-items: center;
+  align-items: center;
+}
+.grid__items{
+  padding: 24px 24px;
+  border: 1px solid #333F72;
+  border-radius: 48px 0px;
+  height: 366px;
+  padding-top: 225px;
+  position: relative;
+}
+.grid__items h2{ 
+ text-transform: uppercase;
+ font-family: "HiroMisaki";
+}
+.grid__items button{
+  font-family: "HiroMisaki";
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 16px 65px;
+  background-color: transparent;
+  border-radius:24px 0px ;
+  font-size: 20px;
+  transition: .3s ease;
+} 
+.grid__items button:hover{
+  border: 1px solid var(--orange);
+  background-color: var(--orange);
+  color: white;
+} 
+.grid__menu__price{
+  justify-content: space-between;
+  margin-bottom: 35px;
+  align-items: center;
+}
+.grid__menu__price h2,h4{
+  color: #333F72;
+
+}
+.grid__menu__price h4{
+  font-size: 14px;
+}
+.grid__image{
+  position: absolute;
+  top: 25px;
+}
+/* !MENU */
+
+
+/* !TESTIMONIALS */
+
+.testimonials{
+  padding: 0 80px 220px;
+  text-align: center;
+  
+}
+.testimonials h1{
+  font-size: 48px;
+  font-family: "HiroMisaki";
+  color: #333F72;
+}
+.marta__photo{
+  transform: translateY(100px);
+}
+.testimonials__container{
+  grid-template-columns: repeat(3,1fr);
+  transform: translateY(50px);
+}
+.testimonials__container img:nth-child(2){
+  transform: translate(-110px,150px);
+}
+.testimonials__container img:nth-child(3){
+  transform: translate(-200px,-40px);
+}
+/* !TESTIMONIALS */
+
+/* !FOOTER */
+
+.footer{
+  justify-content: space-between;
+  padding: 50px 40px;
+  background-color: #1D2544;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.footer__link{
+  align-items: start;
+}
+.footer__list li a{
+  color: white;
+  font-size: 16px;
+  font-family: "Satoshi-Medium";
+  font-weight: 500;
+}
+.footer__list li{
+  line-height: 30px;
+}
+.footer__link__title h4 a{
+  color: white;
+  font-size: 12px;
+  font-family: "Satoshi-Light";
+  font-weight: 400;
+}
+.footer__link__title{
+  margin-right: 60px;
+}
+
+.icon__white{
+  color: white;
+  font-size: 15px;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+.icon__white::after{
+  content: "";
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+/* !FOOTER */
